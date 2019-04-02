@@ -6997,7 +6997,19 @@ if((eSoundMode==e_SOUND_MODE_LOUD)||(eSoundMode==e_SOUND_MODE_ONCE))
 	  else if (*(strchr_pointer + index) == 'x'){ //load to bondtech gears; if mmu is not present do nothing
 		if (mmu_enabled)
 		{
-			tmp_extruder = choose_menu_P(_T(MSG_CHOOSE_FILAMENT), _T(MSG_FILAMENT));
+			if(code_seen('F'))
+			{
+				tmp_extruder = code_value_uint8();
+				if(tmp_extruder > 5)
+				{
+					SERIAL_ECHOLNPGM("Invalid filament selection.");
+					tmp_extruder = choose_menu_P(_T(MSG_CHOOSE_FILAMENT), _T(MSG_FILAMENT));
+				}
+			}
+			else
+			{
+				tmp_extruder = choose_menu_P(_T(MSG_CHOOSE_FILAMENT), _T(MSG_FILAMENT));
+			}
 			if ((tmp_extruder == mmu_extruder) && mmu_fil_loaded) //dont execute the same T-code twice in a row
 			{
 				printf_P(PSTR("Duplicate T-code ignored.\n"));
