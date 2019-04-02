@@ -15,7 +15,7 @@
 #define DEVELOPER
 
 // Printer name
-#define CUSTOM_MENDEL_NAME "Prusa i3 MK2.5"
+#define CUSTOM_MENDEL_NAME "Haribo MK2.5"
 
 // Electronics
 #define MOTHERBOARD BOARD_RAMBO_MINI_1_3
@@ -25,7 +25,7 @@
 #define TACH0PULLUP
 
 // Uncomment the below for the E3D PT100 temperature sensor (with or without PT100 Amplifier)
-//#define E3D_PT100_EXTRUDER_WITH_AMP
+#define E3D_PT100_EXTRUDER_WITH_AMP
 //#define E3D_PT100_EXTRUDER_NO_AMP
 //#define E3D_PT100_BED_WITH_AMP
 //#define E3D_PT100_BED_NO_AMP
@@ -61,7 +61,7 @@
 #define X_MIN_POS 0
 #define Y_MAX_POS 210
 #define Y_MIN_POS -4
-#define Z_MAX_POS 210
+#define Z_MAX_POS 222
 #define Z_MIN_POS 0.15
 
 // Canceled home position
@@ -257,7 +257,7 @@
 #endif
 
 // temperature runaway
-#define TEMP_RUNAWAY_BED_HYSTERESIS 5
+#define TEMP_RUNAWAY_BED_HYSTERESIS 15
 #define TEMP_RUNAWAY_BED_TIMEOUT 360
 
 #define TEMP_RUNAWAY_EXTRUDER_HYSTERESIS 15

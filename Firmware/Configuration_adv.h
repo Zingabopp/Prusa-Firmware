@@ -169,7 +169,7 @@
 #define INVERT_E_STEP_PIN 0
 
 //default stepper release if idle
-#define DEFAULT_STEPPER_DEACTIVE_TIME 60
+#define DEFAULT_STEPPER_DEACTIVE_TIME 180
 
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // minimum feedrate
 #define DEFAULT_MINTRAVELFEEDRATE     0.0
@@ -378,7 +378,7 @@ const unsigned int dropsegments=5; //everything with less than this number of st
 #define FWRETRACT  //ONLY PARTIALLY TESTED
 #ifdef FWRETRACT
   #define MIN_RETRACT 0.1                //minimum extruded mm to accept a automatic gcode retraction attempt
-  #define RETRACT_LENGTH 3               //default retract length (positive mm)
+  #define RETRACT_LENGTH 1               //default retract length (positive mm)
   #define RETRACT_LENGTH_SWAP 13         //default swap retract length (positive mm), for extruder change
   #define RETRACT_FEEDRATE 45            //default feedrate for retracting (mm/s)
   #define RETRACT_ZLIFT 0                //default retract Z-lift
